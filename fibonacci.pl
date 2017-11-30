@@ -1,12 +1,8 @@
-A is 0,
-B is 1,
-C is 1,
-fab(X):-
-(X=:=0)-> write('0').
-fab(X):-
-Z is A+B,
-C is B+1,
-D is X-1,
-write(Z),
-write(' '),
-fab(D).
+fibo(1,0).
+fibo(2,1).
+fibo(N,F):-
+N1 is N-1,
+N2 is N-2,
+fibo(N1,F1),
+fibo(N2,F2),
+F is F1+F2.
